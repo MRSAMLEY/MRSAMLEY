@@ -1,0 +1,177 @@
+:root {
+  --bg: #ffffff;
+  --text: #222;
+  --muted: #555;
+  --accent: #3498db;
+  --card: #f7f7f7;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  font-family: Arial, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.5;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  width: 100%;
+}
+
+/* Header */
+.site-header {
+  background: var(--accent);
+  color: #fff;
+  padding: 15px 20px;
+}
+.header-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.brand {
+  font-weight: bold;
+  font-size: 22px;
+  color: #fff;
+  text-decoration: none;
+}
+.main-nav {
+  display: flex;
+  gap: 15px;
+}
+.main-nav a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 15px;
+}
+.cart {
+  color: #fff;
+  text-decoration: none;
+  margin-left: 15px;
+}
+
+/* Hero */
+.hero {
+  background: #f0f0f0;
+  padding: 40px 20px;
+  text-align: center;
+}
+.hero h1 {
+  font-size: 32px;
+  margin-bottom: 10px;
+}
+.hero p {
+  color: var(--muted);
+  margin-bottom: 15px;
+}
+.hero .btn {
+  background: var(--accent);
+  color: #fff;
+  padding: 10px 16px;
+  border-radius: 5px;
+  text-decoration: none;
+  display: inline-block;
+}
+
+/* Categories */
+.categories h2 {
+  margin: 20px 0 10px;
+}
+.subjects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(140px,1fr));
+  gap: 15px;
+}
+.subject {
+  background: var(--card);
+  padding: 15px;
+  border-radius: 5px;
+  text-align: center;
+  text-decoration: none;
+  color: var(--text);
+}
+.subject .icon { font-size: 24px; }
+.subject .label { font-weight: bold; margin-top: 5px; }
+
+/* Featured Books */
+.featured h2 {
+  margin: 20px 0 10px;
+}
+.products-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px,1fr));
+  gap: 15px;
+}
+.product {
+  background: var(--card);
+  padding: 15px;
+  border-radius: 5px;
+}
+.thumb {
+  height: 150px;
+  background: #ddd;
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
+.title { font-size: 16px; margin-bottom: 5px; }
+.meta { color: var(--muted); font-size: 13px; margin-bottom: 5px; }
+.price { font-weight: bold; margin-bottom: 8px; }
+.actions { display: flex; gap: 8px; }
+.btn.small {
+  flex: 1;
+  text-align: center;
+  padding: 8px;
+  border-radius: 4px;
+  background: var(--accent);
+  color: #fff;
+  text-decoration: none;
+  font-size: 13px;
+}
+.btn.ghost {
+  background: transparent;
+  border: 1px solid var(--accent);
+  color: var(--accent);
+}
+
+/* Footer */
+.site-footer {
+  background: #f0f0f0;
+  padding: 15px 0;
+  text-align: center;
+  font-size: 14px;
+  color: var(--muted);
+}
+
+/* 📱 Responsive Design */
+@media (max-width: 768px) {
+  .header-inner {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .main-nav {
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 10px;
+  }
+  .hero h1 {
+    font-size: 24px;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero {
+    padding: 30px 15px;
+  }
+  .hero h1 {
+    font-size: 20px;
+  }
+  .btn {
+    font-size: 14px;
+    padding: 8px 12px;
+  }
+}
